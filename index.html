@@ -10,7 +10,7 @@
                 $('#incomingChatMessages').append($('<li>Connected</li>'));
  
                 iosocket.on('message', function(message) {
-                    $('#incomingChatMessages').append($('<li></li>').text(message));
+                    $('#incomingChatMessages').append($('<li></li>').text(message.id));
                 });
                 iosocket.on('disconnect', function() {
                     $('#incomingChatMessages').append('<li>Disconnected</li>');
@@ -20,7 +20,7 @@
             $('#outgoingChatMessage').keypress(function(event) {
                 if(event.which == 13) {
                     event.preventDefault();
-                    iosocket.send($('#outgoingChatMessage').val());
+                    iosocket.emit('new update',{'message': $('#outgoingChatMessage').val(),'id':'abcd'});
                     $('#incomingChatMessages').append($('<li></li>').text($('#outgoingChatMessage').val()));
                     $('#outgoingChatMessage').val('');
                 }
