@@ -1,0 +1,33 @@
+<head>
+  <title>agile-retro</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+ <link rel="stylesheet" href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<script src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+</head>
+<body>
+{{>main}}
+<script>
+$(document).bind('DOMSubtreeModified',function(){
+  alert("now there are " + $('.notes').length + " links on this page.");
+})
+</script>
+</body>
+
+<template name="notes">
+  <div class="note" id={{notedivid}}><h1>{{title}}</h1>
+  <input type="text" class="newline" id="{{noteid}}"/>
+  {{#each messages}}
+    <div>{{note}}</div>
+  {{/each}}
+  </div>
+
+</template>
+
+<template name="main">
+{{#each allnotes}}
+  <div id="{{noteid}}">  
+  {{> notes}}
+{{/each}}
+</div>
+  <button id="add"> Add note</button>
+</template>

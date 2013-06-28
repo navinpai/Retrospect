@@ -1,0 +1,6 @@
+/* CSS declarations go here */
+textarea{
+    border-style: none; 
+    border-color: Transparent; 
+    overflow: auto; 
+}
