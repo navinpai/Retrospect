@@ -1,0 +1,41 @@
+<head>
+  <title>Agile Retrospective</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+ <link rel="stylesheet" href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+ <link href='http://fonts.googleapis.com/css?family=Text+Me+One|Londrina+Shadow|Londrina+Solid' rel='stylesheet' type='text/css'>
+
+<script src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<!-- If you're here, you're probably looking for the source code of this app. Rest assured, it'll be up on http://github.com/navinpai soon :) :) -->
+</head>
+<body>
+
+{{>main}}
+<div id="footer">Crafted with <span id="heart">&hearts;</span> by <a target="_blank" href="http://twitter.com/navinpai">@navinpai</a></div>
+</body>
+
+<template name="notes">
+  <div class="note" style="position:absolute;left:{{leftposition}};  width:{{width}}; top:{{topposition}}" id={{notedivid}}>
+   <div class="notecontent" style= "height: {{height}};" >
+  <h1 class="title">{{title}}</h1>
+  <div class="edit-title"><input class="title-editor" type="text"/></div>
+  <input type="text" placeholder="Type here" class="newline" id="{{noteid}}"/>
+  {{#each messages}}
+    <div class="line" id=line-{{noteno}}>{{note}}<span class="del-line">x</span></div>
+    <div class="edit-line" id=edit-{{noteno}}><input class="line-editor" type="text"/></>
+
+    
+  {{/each}}
+  <div class="header"><div class='del'>x</div></div>
+  </div>
+  </div>
+
+</template>
+
+<template name="main">
+{{#each allnotes}}
+  <div id="{{noteid}}">  
+  {{> notes}}
+{{/each}}
+</div>
+  <div id="add">+Note</div>
+</template>

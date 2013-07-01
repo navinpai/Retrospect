@@ -1,0 +1,209 @@
+/* CSS declarations go here */
+textarea {
+border-color:Transparent;
+border-style:none;
+overflow:auto;
+}
+
+body {
+background:#000 url(dark_tire.png);
+height:100%;
+}
+
+#footer {
+background:#000;
+bottom:0;
+color:#fff;
+font-family:arial,helvetica,sans-serif;
+font-size:12px;
+padding-bottom:5px;
+padding-top:5px;
+position:fixed;
+text-align:center;
+width:100%;
+}
+
+#footer a:visited,a {
+color:#fff;
+}
+
+#heart {
+color:#ff1493;
+}
+
+.note {
+background-color:#F0DC82;
+box-shadow:10px 10px 50px 10px #292929;
+font-family:'Text Me One', sans-serif;
+padding-bottom:10px;
+padding-top:10px;
+position:relative;
+text-align:left;
+width:200px;
+word-wrap:break-word;
+}
+
+.line {
+padding-bottom:5px;
+padding-left:10px;
+padding-right:10px;
+}
+
+.newline {
+margin-bottom:10px;
+margin-top:10px;
+padding:3px;
+}
+
+.header {
+-moz-box-sizing:border-box;
+-webkit-box-sizing:border-box;
+background:#000;
+box-sizing:border-box;
+height:30px;
+position:absolute;
+top:0;
+width:100%;
+}
+
+.del {
+color:red;
+cursor:pointer;
+float:left;
+font-family:Helvetica,Arial, sans-serif;
+font-size:20px;
+padding:5px;
+position:absolute;
+top:0;
+}
+
+.edit-title {
+display:none;
+font-size:20px;
+height:38px;
+margin-bottom:30px;
+margin-top:15px;
+width:100%;
+}
+
+.title-editor {
+-moz-box-sizing:border-box;
+-webkit-box-sizing:border-box;
+box-sizing:border-box;
+font-size:20px;
+height:40px;
+margin-bottom:10px;
+margin-top:5px;
+width:100%;
+}
+
+.del-line {
+color:red;
+cursor:pointer;
+float:right;
+z-index:999;
+}
+
+#add {
+bottom:30px;
+color:#fff;
+cursor:pointer;
+font-family:'Londrina Shadow', cursive;
+font-size:44px;
+position:absolute;
+right:10px;
+}
+
+.title {
+text-align:center;
+}
+
+.title:hover {
+color:#ccc;
+text-align:center;
+}
+
+input {
+-moz-box-sizing:border-box;
+-webkit-box-sizing:border-box;
+box-sizing:border-box;
+width:100%;
+}
+
+.ui-resizable {
+position:relative;
+}
+
+.ui-resizable-handle {
+display:block;
+font-size:.1px;
+position:absolute;
+}
+
+.ui-resizable-n {
+cursor:n-resize;
+height:7px;
+left:0;
+top:-5px;
+width:100%;
+}
+
+.ui-resizable-s {
+bottom:-5px;
+cursor:s-resize;
+height:7px;
+left:0;
+width:100%;
+}
+
+.ui-resizable-e {
+cursor:e-resize;
+height:100%;
+right:-5px;
+top:0;
+width:7px;
+}
+
+.ui-resizable-w {
+cursor:w-resize;
+height:100%;
+left:-5px;
+top:0;
+width:7px;
+}
+
+.ui-resizable-se {
+bottom:1px;
+cursor:se-resize;
+height:12px;
+right:1px;
+width:12px;
+}
+
+.ui-resizable-sw {
+bottom:-5px;
+cursor:sw-resize;
+height:9px;
+left:-5px;
+width:9px;
+}
+
+.ui-resizable-nw {
+cursor:nw-resize;
+height:9px;
+left:-5px;
+top:-5px;
+width:9px;
+}
+
+.ui-resizable-ne {
+cursor:ne-resize;
+height:9px;
+right:-5px;
+top:-5px;
+width:9px;
+}
+
+.edit-line,.ui-resizable-disabled .ui-resizable-handle,.ui-resizable-autohide .ui-resizable-handle {
+display:none;
+}
