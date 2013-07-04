@@ -34,7 +34,7 @@ if (Meteor.isClient) {
    }
    Template.main.rendered=function(){
        $(".note").resizable();
-       $(".note").draggable({ containment: "html" });
+       $(".note").draggable({ containment: "content" });
     }
     Template.main.created=function(){
         setInterval(runInterval,2000);
@@ -43,6 +43,7 @@ if (Meteor.isClient) {
     'click #add': function(e) {
         var boardNoteCount=getNoteCount('board');
         noteId='inp-'+(boardNoteCount);
+        var left=Math.floor(Math.random()*100)+300;
         Notes.insert({id:noteId,title:"New Note",height: '300px',width:'300px',left:'100px',top:'100px',board:'board',notecount:boardNoteCount+1});
          }
 
@@ -241,7 +242,7 @@ return (note.notecount)
 }
 
 var runInterval=function(){
-    $(".note").resizable("destroy");
+       $(".note").resizable("destroy");
        $(".note").resizable();
-       $(".note").draggable({ containment: "html" });
+       $(".note").draggable({ containment: "content" });
     }

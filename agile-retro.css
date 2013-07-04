@@ -85,6 +85,13 @@ margin-bottom:30px;
 margin-top:15px;
 width:100%;
 }
+#content{
+position: absolute;
+left:0px;
+right: 0px;
+top: 0px;
+bottom: 0px;
+}
 
 .title-editor {
 -moz-box-sizing:border-box;
